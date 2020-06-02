@@ -17,7 +17,7 @@ public class TestScript1 {
 			move.manage().window().maximize();
 			
 			//Close the browser
-			//move.close();
+			move.close();
 			
 			//Print message for our understanding
 			System.out.println("Launch browser, Enter Url, Maximize browser and close browser");
