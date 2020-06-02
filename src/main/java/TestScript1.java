@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -16,8 +17,10 @@ public class TestScript1 {
 			//Maximize the browser
 			move.manage().window().maximize();
 			
+			move.findElement(By.id("contact_email")).sendKeys("banaja@gmail.com");
+			
 			//Close the browser
-			move.close();
+			//move.close();
 			
 			//Print message for our understanding
 			System.out.println("Launch browser, Enter Url, Maximize browser and close browser");
