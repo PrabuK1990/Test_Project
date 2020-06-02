@@ -5,4 +5,14 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Test1</name>
   <description>Testing Purpose</description>
+  
+      <dependencies>
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+  </dependencies>
+  
+  
 </project>
