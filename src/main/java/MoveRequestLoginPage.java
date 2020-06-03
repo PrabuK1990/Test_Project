@@ -2,8 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MoveLoginPage {
-	
+public class MoveRequestLoginPage {
 	public WebDriver move;//move is a reference variable.
 	//Here no object is assigned to this reference variable.
 	//An object will be assigned to it in some method.
@@ -54,9 +53,10 @@ public class MoveLoginPage {
 	}
 	
 	//Click on login Button
-	public void clickLoginButton()
+	public void clickRequestLoginButton()
 	{
-		move.findElement(By.name("commit")).click();
+		//move.findElement(By.name("commit")).click();
+		move.findElement(By.xpath("//a[@href='http://moveoutdoor.com.au/get-in-touch']")).click();
 	}
 	
 	//Close the browser
@@ -64,4 +64,5 @@ public class MoveLoginPage {
 	{
 		move.close();
 	}
+
 }
