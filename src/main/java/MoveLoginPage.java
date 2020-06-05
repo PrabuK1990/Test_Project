@@ -13,7 +13,7 @@ public class MoveLoginPage {
 	//Location to the chrome driver executable file path
 	public void setPath()
 	{
-		System.setProperty("webdriver.chrome.driver", "/home/jeli/Downloads/chromedriver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vidhya\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	}
 	
 	//Object Creation(here move) for Chrome Driver class
@@ -53,10 +53,10 @@ public class MoveLoginPage {
 		move.findElement(By.id("contact_password")).sendKeys("banaja123");
 	}
 	
-	//Click on login Button
-	public void clickLoginButton()
+	//Login Button
+	public void LoginButton()
 	{
-		move.findElement(By.name("commit")).click();
+		move.findElement(By.name("commit")).click();	
 	}
 	
 	//Close the browser
@@ -64,4 +64,11 @@ public class MoveLoginPage {
 	{
 		move.close();
 	}
+	
+	//Close the browser
+	public void closeallBrowser()
+	{
+		move.quit();
+	}
 }
+
