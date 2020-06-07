@@ -9,8 +9,7 @@ public class TestScript1 {
 		loginPage.getUrl();
 		loginPage.maximizeWindow();
 		loginPage.popupClose();
-		//loginPage.LoginButton().isDisplayed();
-		//loginPage.LoginButton().click();
+		loginPage.LoginButton();
 		loginPage.closeallBrowser();
 		
 		System.out.println("Scenraio 1 : Set Path, Browser Launch, Enter Url, Maximize Window, Close pop-up, Login Button Displayed, Login Click Button and Close All Browser");
