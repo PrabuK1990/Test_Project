@@ -2,9 +2,8 @@
 public class TestScript3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
-		MoveResetPasswordPage loginPage = new MoveResetPasswordPage();
+		
+		MoveLoginPage_Reusables loginPage = new MoveLoginPage_Reusables();
 		
 		loginPage.setPath();
 		loginPage.chromeBrowser();
@@ -12,7 +11,9 @@ public class TestScript3 {
 		loginPage.maximizeWindow();
 		loginPage.popupClose();
 		loginPage.clickResetPasswordButton();
-		//loginPage.closeBrowser();
+		loginPage.closeallBrowser();
+		
+		System.out.println("Scenraio 3 : Set Path, Browser Launch, Enter Url, Maximize Window, Close pop-up, Click Reset Password Button and Close All Browser");
 	}
 
 }

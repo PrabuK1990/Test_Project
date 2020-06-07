@@ -2,16 +2,18 @@
 public class TestScript2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		MoveRequestLoginPage rqstloginPage = new MoveRequestLoginPage();
+
+		MoveLoginPage_Reusables loginPage = new MoveLoginPage_Reusables();
 		
-		rqstloginPage.setPath();
-		rqstloginPage.chromeBrowser();
-		rqstloginPage.getUrl();
-		rqstloginPage.maximizeWindow();
-		rqstloginPage.popupClose();
-		rqstloginPage.clickRequestLoginButton();
-		rqstloginPage.closeBrowser();
+		loginPage.setPath();
+		loginPage.chromeBrowser();
+		loginPage.getUrl();
+		loginPage.maximizeWindow();
+		loginPage.popupClose();
+		loginPage.clickRequestLoginButton();
+		loginPage.closeallBrowser();
+		
+		System.out.println("Scenraio 2 : Set Path, Browser Launch, Enter Url, Maximize Window, Close pop-up, Click Request Login Button and Close All Browser");
 	}
 
 }

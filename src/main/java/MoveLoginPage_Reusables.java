@@ -1,12 +1,10 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-
-public class MoveLoginPage {
+public class MoveLoginPage_Reusables implements MoveLoginPage_Controls, MoveLoginPage_Inputs{
 	
-	public WebDriver move;//move is a reference variable.
-	//Here no object is assigned to this reference variable.
-	//An object will be assigned to it in some method.
-	//To this reference an object of webdriver or it's sub class can
-	//be assigned
+	public WebDriver move;
 	
 	//Location to the chrome driver executable file path
 	public void setPath()
@@ -24,7 +22,7 @@ public class MoveLoginPage {
 	//Enter Url in the browser
 	public void getUrl()
 	{
-		move.get("https://ams.moveoutdoor.com.au/");
+		move.get(MoveLoginPage_URL);
 	}
 	
 	//Maximize the browser
@@ -36,38 +34,38 @@ public class MoveLoginPage {
 	//Close browser pop-up
 	public void popupClose()
 	{
-		move.findElement(By.xpath("//input[@class='close']")).click();
+		move.findElement(By.xpath(MoveLoginPage_PopupClose)).click();
 	}
 	
 	//Enter Email Id into email field
 	public void enterEmail()
 	{
-		move.findElement(By.id("contact_email")).sendKeys("banaja@gmail.com");
+		move.findElement(By.id(MoveLoginPage_EmailIDField)).sendKeys(MoveLoginPage_EmailId);
 	}
 	
 	//Enter Password into Password field
 	public void enterPassword()
 	{
-		move.findElement(By.id("contact_password")).sendKeys("banaja123");
+		move.findElement(By.id(MoveLoginPage_PasswordField)).sendKeys(MoveLoginPage_Password);
 	}
 	
 	//Login Button
 	public void LoginButton()
 	{
-		move.findElement(By.name("commit")).click();	
+		move.findElement(By.name(MoveLoginPage_LoginButton)).click();	
 	}
 	
 	//To click the reset password button
 	public void clickResetPasswordButton() 
 	{
-		move.findElement(By.xpath("//a[contains (text(),'Re-set Password')]")).click();
+		move.findElement(By.xpath(MoveLoginPage_ResetPasswordButton)).click();
 	}
 	
 	//Click on login Button
 	public void clickRequestLoginButton()
 	{
 		//move.findElement(By.name("commit")).click();
-		move.findElement(By.xpath("//a[@href='http://moveoutdoor.com.au/get-in-touch']")).click();
+		move.findElement(By.xpath(MoveLoginPage_RequestLoginButton)).click();
 	}
 	
 	//Close the browser
