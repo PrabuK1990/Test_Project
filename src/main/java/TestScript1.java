@@ -4,7 +4,7 @@ public class TestScript1 {
 		
 		MoveLoginPage_Reusables loginPage = new MoveLoginPage_Reusables();
 		
-		loginPage.setPath();
+		loginPage.setPathChromeDriver();
 		loginPage.chromeBrowser();
 		loginPage.getUrl();
 		loginPage.maximizeWindow();

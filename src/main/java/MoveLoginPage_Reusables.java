@@ -1,22 +1,34 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class MoveLoginPage_Reusables implements MoveLoginPage_Controls, MoveLoginPage_Inputs{
 	
 	public WebDriver move;
 	
 	//Location to the chrome driver executable file path
-	public void setPath()
+	public void setPathChromeDriver()
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vidhya\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	}
 	
-	//Object Creation(here move) for Chrome Driver class
-	//and launch browser
+	//Location to the firefox driver executable file path
+	public void setPathFirefoxDriver()
+	{
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Vidhya\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+	}
+	
+	//Object Creation(here move) for Chrome Driver class and launch browser
 	public void chromeBrowser()
 	{
 		move = new ChromeDriver();
+	}
+	
+	//Object Creation(here move) for firefox Driver class and launch browser
+	public void firefoxBrowser()
+	{
+		move = new FirefoxDriver();
 	}
 	
 	//Enter Url in the browser
@@ -56,8 +68,14 @@ public class MoveLoginPage_Reusables implements MoveLoginPage_Controls, MoveLogi
 	}
 	
 	//To click the reset password button
-	public void clickResetPasswordButton() 
+	public void clickResetPasswordButton()
 	{
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		move.findElement(By.xpath(MoveLoginPage_ResetPasswordButton)).click();
 	}
 	
