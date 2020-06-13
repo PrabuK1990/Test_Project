@@ -10,7 +10,7 @@ public class MoveLoginPage_Reusables implements MoveLoginPage_Controls, MoveLogi
 	//Location to the chrome driver executable file path
 	public void setPathChromeDriver()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Vidhya\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/home/jeli/Downloads/chromedriver");
 	}
 	
 	//Location to the firefox driver executable file path
