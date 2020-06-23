@@ -12,7 +12,6 @@ public class again {
 		driver.findElement(By.id("txtUsername")).sendKeys("abcd");
 		driver.findElement(By.id("txtPassword")).sendKeys("pswd");
 		driver.findElement(By.id("btnLogin")).click();
-
 	}
 
 }
