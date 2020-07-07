@@ -41,8 +41,7 @@ public class NaukriRegisterPageReusables extends ProjectReusables {
 		
 		// Click on Register now button in Register Page
 		public void registerPageControlsRegisterNow()
-		{
-		
+		{		
 		naukri.findElement(By.xpath(RegisterPageControls_RegisterNowButton)).submit();
 		}
 

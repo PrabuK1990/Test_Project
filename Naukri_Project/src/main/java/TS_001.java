@@ -1,8 +1,8 @@
+import java.io.IOException;
 
-  
 public class TS_001 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		System.out.println("Scenario 1 : To Verify Login Functionality");
 		
@@ -13,9 +13,11 @@ public class TS_001 {
 		//-------------------------------------------------------------------------------
 		//Webdriver NaukriLoginPageReusables = new ChromeDriver();
 		
+		LoadExcel excel = new LoadExcel();
 		ProjectReusables projectReusables = new ProjectReusables();
 		NaukriHomePageReusables naukriHomePageReusables = new NaukriHomePageReusables();
 		
+		excel.loadExcelFile();
 		projectReusables.setProperty_Chrome();
 		projectReusables.chromeBrowser();
 		projectReusables.maximizeBrowser();

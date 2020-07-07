@@ -1,10 +1,11 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ProjectReusables implements NaukriLoginPageControls, NaukriLoginPageInputs{
+public class ProjectReusables extends LoadExcel implements NaukriHomePageControls{
 	
 	public static WebDriver naukri;
-
+	
 	//Set Path for Chrome Driver executable
 	public void setProperty_Chrome()
 	{
@@ -20,11 +21,28 @@ public class ProjectReusables implements NaukriLoginPageControls, NaukriLoginPag
 		
 		naukri  = new ChromeDriver();
 	}
+		
+	
+	//Set Path for Firefox Gecko Driver executable
+	public void setProperty_Firefox()
+	{
+		System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
+	}
+	
+	//Launch Firefox Browser
+	public void firefoxBrowser()
+	{
+		//Create new instance for ChromeDriver class and store it in a object
+		//and name it as "naukriLoginPage"
+		//Mention Type as "WebDriver"
+		
+		naukri  = new FirefoxDriver();
+	}
 	
 	//Open Naukri Url
 	public void naukriUrl()
 	{
-		naukri.get("https://www.naukri.com/");	
+		naukri.get(NaukriInputs_Url);	
 	}
 
 	//Maximize the current Borwser
@@ -42,7 +60,7 @@ public class ProjectReusables implements NaukriLoginPageControls, NaukriLoginPag
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			}
+	}
 		
 	//Close current browsers/Tabs
 	public void browserClose()
