@@ -1,0 +1,16 @@
+Src / Main / Java
+	* Package
+		> Controls - controls are created as interface, contains locators which can be used in resubales 
+		> Resources - resources are created as excel or properties files, contains only inputs
+		> Reusables - reusbales are created as class, contains methods/functions which can be called in test scripts wherever required
+		
+Src / Test / Java
+	* Package
+		> testscripts
+		
+TestNG Annotations
+	- BeforeTest - its going to execute before all tests available in the particular class
+	- BeforeMethod - its going to execute before each test available in the particular class
+	- Test - this is actual test
+	- AfterTest - its going to execute after all tests available in the particular class
+	- AfterMethod - its going to execute after each test available in the particular class
